@@ -132,3 +132,54 @@ if (lesQuiere === true) {
 } else {
     console.log("Vamos por una salchipapa");
 }
+
+//Estructuras repetitivas
+
+let contador = 0;
+
+while (contador < 10) {
+    console.log("while", contador);
+    // contador = contador + 1
+    contador++;
+}
+
+//al menos se ejecuta una vez
+
+let continuar = false;
+
+do {
+    console.log("Me estoy ejecutando");
+} while (continuar === true);
+
+for (let i = 0; i < 7; i++) {
+    console.log("estoy en el for", i);
+}
+
+let arregloNotas = [
+    {
+        nombre: "Juan",
+        nota: 20,
+    },
+    {
+        nombre: "Maria",
+        nota: 20,
+    },
+    {
+        nombre: "Michell",
+        nota: 19,
+    },
+    {
+        nombre: "Lucia",
+        nota: 18,
+    },
+];
+
+for (let i = 0; i < arregloNotas.length; i++) {
+    //backtick `, esta al costado de la tecla ENTER
+    console.log(`La nota de ${arregloNotas[i].nombre} es: ${arregloNotas[i].nota}`);
+}
+
+// console.log("Hola soy " + arregloNotas[3].nombre);
+// console.log("1" + 11);
+
+console.log(`Hola soy ${arregloNotas[3].nombre} ${10 + 4}`);
