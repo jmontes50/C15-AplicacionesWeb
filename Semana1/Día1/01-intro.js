@@ -42,3 +42,72 @@ console.log(noDefinido);
 let nulo = null;
 
 console.log(nulo);
+
+console.log(25 / "pollos");
+
+//ARREGLOS
+
+let nombresAlumnos = ["Andre", "Guido", "Aldo", "Nikoll", "Junior"];
+
+console.log(nombresAlumnos[4]);
+
+//push para agregar
+nombresAlumnos.push("Klebert");
+
+console.log(nombresAlumnos);
+
+//pop
+nombresAlumnos.pop();
+
+console.log(nombresAlumnos);
+
+//objetos
+let persona = {
+    // clave:valor
+    // propiedad: valor
+    nombre: "Osmar",
+    apellido: "Montesinos",
+    edad: 31,
+    hobbies: ["Programar", "Escuchar Música", "Ver películas"],
+};
+
+console.log(persona.nombre);
+
+console.log(persona.hobbies[2]);
+
+// funciones
+//clásica
+function sumar(a, b) {
+    // console.log(this);
+    return a + b;
+}
+
+console.log(sumar(10, 15));
+
+//función flecha
+const restar = (a, b) => {
+    // console.log(this);
+    return a - b;
+};
+
+console.log(restar(10, 15));
+
+let mascota = {
+    nombre: "Backus",
+    //this es como self de python
+    // ladrar: function () {
+    //     console.log(this);
+    //     console.log("arf!");
+    // },
+    //Window hace referencia al navegador
+    ladrar: () => {
+        console.log(this);
+        console.log("arf!");
+    },
+};
+
+// mascota.ladrar();
+//puedo reducir automaticamente a una línea
+let saludar = (texto = "Hola!!!") => texto;
+
+console.log(saludar("Buenas Tardes"));
