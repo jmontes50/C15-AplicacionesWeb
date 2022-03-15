@@ -111,3 +111,24 @@ let mascota = {
 let saludar = (texto = "Hola!!!") => texto;
 
 console.log(saludar("Buenas Tardes"));
+
+//Estructura condicional
+
+let lesQuiere = true;
+
+// un solo = es asignación, esto es igual que
+// == estan comparando el contenido
+console.log("solo con dos =", 1 == "1");
+// === estoy comparando el contenido y el tipo de dato
+console.log("con tres =", 1 === "1");
+// !== DIFERENTE DE
+
+lesQuiere = "Estamos conociendonos";
+
+if (lesQuiere === true) {
+    console.log("Felicidades!!!!");
+} else if (typeof lesQuiere !== "boolean") {
+    console.log("Parece complicado", typeof lesQuiere);
+} else {
+    console.log("Vamos por una salchipapa");
+}
