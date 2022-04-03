@@ -34,11 +34,24 @@ let configuracion = {
 };
 
 //fetch(endpoint, configuración)
+/** 
 fetch("https://reqres.in/api/users", configuracion)
     .then((respuesta) => {
+        console.log(respuesta);
         return respuesta.json();
     })
     .then((usuarioCreado) => {
         console.log(usuarioCreado);
     })
     .catch((err) => console.log(err));
+
+*/
+
+const crearUsuario = async () => {
+    try {
+        let respuesta = await fetch("https://reqres.in/api/users", configuracion);
+        console.log(respuesta);
+    } catch (error) {
+        console.log(error);
+    }
+};
