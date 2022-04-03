@@ -8,9 +8,9 @@ const hornearTorta = async () => {
     // }
     let resultado = true;
     if (resultado) {
-        return "READY";
+        return "READY"; //Resolve
     } else {
-        throw "RAPPIIIIIIII";
+        throw "RAPPIIIIIIII"; //Reject
     }
 };
 
@@ -25,23 +25,21 @@ const hornearTorta = async () => {
 //         console.log(resNegativo);
 //     });
 
-const prepararGlaseado = async () => {
-    setTimeout(() => {
-        let resultado = true;
-        if (resultado) {
-            return "Glaseado listo"; //resolve
-        } else {
-            throw "Quemamos el microondas";
-        }
-    }, 4000);
+const prepararGlaseado = () => {
+    let glaseado = true;
+    if (glaseado) {
+        return "glaseado Listo";
+    } else {
+        throw "quemamos el microondas";
+    }
 };
 
 const ejecutarProceso = async () => {
     try {
         let resultado = await hornearTorta(); //
-        let resGlaseado = await prepararGlaseado();
-        console.log(resultado);
-        console.log(resGlaseado);
+        let resultado2 = await prepararGlaseado();
+
+        console.log(resultado2);
     } catch (error) {
         console.log(error);
     }
