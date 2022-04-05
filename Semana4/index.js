@@ -72,3 +72,52 @@ let persona2 = {
 };
 
 console.log(describir(persona2));
+
+//Object Literals
+
+let smartphone = {
+    marca:"Redmi",
+    modelo:"Note 9",
+    anio:2021,
+    ["color"]:"azul"
+}
+
+console.log(smartphone.color);
+
+console.log(smartphone["modelo"]);
+
+//switch
+const pedirBebida = (bebida) => {
+    let bebidaEscogida = ""
+    switch(bebida){
+        case 1:1
+            bebidaEscogida = "Cocacola";
+            break; //cortar la ejecución del código
+        case 2:
+            bebidaEscogida = "Chicha Morada";
+            break;
+        case 3:
+            bebidaEscogida = "Inka cola";
+            break;
+        default:
+            bebidaEscogida = "Agua";
+    }
+
+    return bebidaEscogida
+}
+
+console.log(pedirBebida(3))
+
+const pedirBebida2 = (bebida) => {
+    let escogida = ""
+    let misBebidas = {
+        '1':"Cocacola",
+        '2':"Chicha",
+        '3':"Inkacola",
+        'default':"Agua"
+    }
+
+    return misBebidas[bebida] || misBebidas["default"]
+}
+
+console.log(pedirBebida2())
